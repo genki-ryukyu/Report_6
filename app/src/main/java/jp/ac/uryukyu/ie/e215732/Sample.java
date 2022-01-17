@@ -5,16 +5,24 @@ public class Sample {
     String Rank;
 
     /**
-     * 
-     * @param Slotter
-     * @param Rank
-     * @return 
+     * rundamメソッド
+     * 0〜引数までの整数値の範囲でランダムに返す。
+     * @param Len 整数値
+     * @return 0~Len の範囲の内、ランダムで返される整数値
      */
 
     public static int rundam(int Len){
         int result = new java.util.Random().nextInt(Len);
         return result;
     }
+
+    /**
+     * judgeメソッド
+     * 上記のrundamメソッドで返される数値が一桁に収まるかを調べる。
+     * もしも9以下で収まるならTrueを、収まらないならFalseを返す。
+     * @param ran 整数値
+     * @return 上記のメソッドの実行結果で返される数値によって、返される真偽値
+     */
 
     public static boolean judge(int ran){
         int result1 = rundam(ran);
@@ -29,7 +37,16 @@ public class Sample {
         
     }
 
-
+    /**
+     * Sampleメソッド
+     * Mainメソッドで使用するメソッド。
+     * 引数をコマンドで作用させる。（質問に「ランク」と「名前」が付属する。）
+     * もし、「引く」と答えた際には「結果」が出て、どの結果が出たとしても「再トライ」の是非を聞く。
+     * 「再トライ」で「引く」と答えれば、再度「結果」が現れる。
+     *　使用する人間が「止める」を選択するまで続く。
+     * @param Slotter　文字列
+     * @param Rank　文字列
+     */
 
     public static void Sample(String Slotter, String Rank){
         System.out.println("------------------------");
