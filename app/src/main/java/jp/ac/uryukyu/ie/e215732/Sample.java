@@ -54,7 +54,7 @@ public class Sample {
         System.out.println("[0]:引く");
         System.out.println("[1]:止める");
         int answer = new java.util.Scanner(System.in).nextInt();
-        int point = 1;
+        int point = 0;
         if (answer == 0){
             point++;
             System.out.println(point);
